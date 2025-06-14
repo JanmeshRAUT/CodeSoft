@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="header-left">
+                <img src="1.png" alt="">
+            </div>
+            <div class="header-right">
+                <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="about" class="section-animate">
+        <h2>About Me</h2>
+        <div class="about-flex">
+            <img src="photo.png" alt="Your Photo" class="profile-img">
+            <div class="about-details">
+                <p>
+                    Hi! I'm <strong>Janmesh Raut</strong>, a passionate web developer with a strong foundation in front-end and back-end technologies. I specialize in building responsive, accessible, and visually appealing websites and web applications.
+                </p>
+                <ul class="about-list">
+                    <li><strong>Experience:</strong> 2+ years in web development</li>
+                    <li><strong>Education:</strong> B.Tech Information Technology</li>
+                    <li><strong>Location:</strong> Pune, India</li>
+                    <li><strong>Interests:</strong> UI/UX Design, Open Source</li>
+                </ul>
+                <blockquote class="about-quote">
+                    "Code is like humor. When you have to explain it, it’s bad." – Cory House
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="section-animate">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <span class="skill-icon">💻</span>
+                <h3>Front-End</h3>
+                <ul>
+                    <li>HTML5, CSS3, SASS</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React, Tailwind</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🗄️</span>
+                <h3>Back-End</h3>
+                <ul>
+                    <li>Node.js, Express</li>
+                    <li>PHP, MySQL</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <span class="skill-icon">🛠️</span>
+                <h3>Tools & Others</h3>
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>Figma Designer</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="projects" class="section-animate">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <div>
+                    <h3>Portfolio Website</h3>
+                    <p>A modern, responsive personal portfolio built with HTML, CSS, and JavaScript. Features smooth animations, a contact form, and project showcase.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Live</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <div>
+                    <h3>Task Manager App</h3>
+                    <p>A full-stack web app for managing daily tasks, with user authentication and RESTful API integration. Built using Node.js and Express.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span><span>Express</span><span>Bootstrap</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <div>
+                    <h3>Blog Platform</h3>
+                    <p>A blogging platform with Markdown support, user profiles, and comments. Designed for performance and accessibility.</p>
+                    <div class="project-tags">
+                        <span>PHP</span><span>MySQL</span><span>UI/UX</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Live</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section-animate">
+        <h2>Resume</h2>
+        <div class="resume-summary">
+            <p>
+                Download my latest resume or view a quick summary.
+            </p>
+            <ul>
+                <li><strong>B.Tech Information Technology</strong> – MIT ADT University (2023–2027)</li>
+            </ul>
+            <a href="Resume.pdf" download>Download My Resume (PDF)</a>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section-animate">
+        <h2>Contact</h2>
+        <form class="contact-form" autocomplete="off">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:your.email@example.com">janmeshraut11@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+917414970972">+91 7414970972</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/janmesh-raut-48b102288/">linkedin.com/in/janmesh-raut-48b102288</a></p>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section-animate');
+        const reveal = () => {
+            const trigger = window.innerHeight * 0.88;
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if(rect.top < trigger) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', reveal);
+        reveal();
+    });
+    document.querySelector('.contact-form')?.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Thank you for reaching out!');
+    });
+    </script>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="footer-icon">
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="footer-icon">
+                </a>
+                <a href="mailto:your.email@example.com" aria-label="Email">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" class="footer-icon">
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="footer-icon">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a> |
+                <a href="#skills">Skills</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#resume">Resume</a> |
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Janmesh Raut. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

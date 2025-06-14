@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'SF Pro Display', Arial, sans-serif;
+}
+.calculator {
+    background: #23272f;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 32px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35), 0 1.5px 6px rgba(60,60,60,0.12);
+    width: 340px;
+}
+.calculator-action {
+    width: 100%;
+    text-align: right;
+    color: #ff9500;
+    font-size: 1.1rem;
+    min-height: 1.3rem;
+    margin-bottom: 0.2rem;
+    padding-right: 0.5rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+#display{
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 1.2rem 0.8rem;
+    border: none;
+    border-radius: 12px;
+    background: #111;
+    color: #fff;
+    text-align: right;
+    margin-bottom: 1.5rem;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+button{
+    height: 64px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+button:active{
+    background: #444;
+}
+button.operator,
+button:nth-child(4),
+button[value="/"],
+button[value="*"],
+button[value="-"],
+button[value="+"]{
+    background: #ff9500;
+    color: #fff;
+}
+button.equal {
+    background: #ff9500;
+    color: #fff;
+    grid-column: 4;
+    grid-row: 5;
+}
+button.function {
+    background: #a5a5a5;
+    color: #000;
+}
+button.zero {
+    grid-column: span 2;
+    border-radius: 32px;
+    text-align: left;
+    padding-left: 28px;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 98vw;
+        padding: 1rem 0.2rem;
+    }
+    .buttons {
+        gap: 0.5rem;
+    }
+    .btn {
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
